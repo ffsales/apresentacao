@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="template">
+<head>
+	<meta charset="UTF-8" />
+	<title>Clientes</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+	    	<div class="navbar-header">
+	    		<h4>Entrevista JBQ</h4>
+	    	</div>
+	    </div>
+	</nav>
+	
+	<div class="panel-body">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th class="text-center col-md-1">#</th>
+					<th>Nome</th>
+					<th>Data de Nascimento</th>
+					<th>Sexo</th>
+					<th>Telefone</th>
+					<th>Endereço</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="cliente : ${cliente}">
+					<td class="text-center" th:text="${cliente.id}"></td>
+					<td class="text-center" th:text="${cliente.nome}"></td>
+					<td class="text-center" th:text="${cliente.dataNascimento}"></td>
+					<td class="text-center" th:text="${cliente.sexo}"></td>
+					<td class="text-center" th:text="${cliente.telefone}"></td>
+					<td class="text-center" th:text="${cliente.endereco}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

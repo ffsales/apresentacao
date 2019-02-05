@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout.html}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Cliente</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+	    	<div class="navbar-header">
+	    		<h4>Entrevista JBQ</h4>
+	    	</div>
+	    </div>
+	</nav>
+	
+	<form class="form-horizontal"  method="POST" action="/salvar">
+		<div class="panel panel-default">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">Novo Cliente</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<div class="form-group">
+					<label for="nome" class="col-sm-2 control-label">Nome</label>
+					<div class="col-sm-4"> 
+						<input type="text" class="form-control" id="nome" name="nome"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="dataNascimento" class="col-sm-2 control-label">Data de Nascimento</label>
+					<div class="col-sm-4"> 
+						<input type="text" class="form-control" id="dataNascimento" name="dataNascimento"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="sexo" class="col-sm-2 control-label">Sexo</label>
+					<div class="col-sm-2"> 
+						<select class="form-control" name="sexo">
+							<option>Selecione</option>
+							<option value="MASCULINO">Masculino</option>
+							<option value="FEMININO">Feminino</option>
+                    	</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="telefone" class="col-sm-2 control-label">Telefone</label>
+					<div class="col-sm-4"> 
+						<input type="text" class="form-control" id="telefone" name="telefone"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="endereco" class="col-sm-2 control-label">Endereço</label>
+					<div class="col-sm-4"> 
+						<input type="text" class="form-control" id="endereco" name="endereco"/>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Salvar</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</form>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
